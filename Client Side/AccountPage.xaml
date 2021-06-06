@@ -1,0 +1,39 @@
+﻿<Page x:Class="Client_Side.AccountPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Client_Side"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="AccountPage">
+
+    <Grid Background="#FFF9F9F9">
+        <DataGrid AutoGenerateColumns="False" x:Name="accountInfo" HorizontalAlignment="Left" Height="384" Margin="502,56,0,0" VerticalAlignment="Top" Width="288" PreviewMouseDoubleClick="accountInfo_PreviewMouseDoubleClick">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Account ID" IsReadOnly="True" Binding="{Binding AccountID}" Width="150"></DataGridTextColumn>
+                <DataGridTextColumn Header="Balance" IsReadOnly="True" Binding="{Binding Balance}" Width="150"></DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="202" Margin="10,25,0,0" VerticalAlignment="Top" Width="487"/>
+        <Label Content="Create A new Account" HorizontalAlignment="Left" Margin="26,40,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <TextBox x:Name="txtInitAmt" MaxLength="9" HorizontalAlignment="Left" Height="28" Margin="180,100,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="233" FontSize="20"/>
+        <Label Content="Deposit Amount : " HorizontalAlignment="Left" Margin="65,100,0,0" VerticalAlignment="Top" Width="110"/>
+        <Button x:Name="btnCreateAccount" Content="Create" HorizontalAlignment="Left" Margin="153,144,0,0" VerticalAlignment="Top" Width="216" FontSize="16" Click="btnCreateAccount_Click"/>
+        <Button x:Name="btnReset" Content="Reset" HorizontalAlignment="Left" Margin="153,186,0,0" VerticalAlignment="Top" Width="216" FontSize="16" Click="btnReset_Click"/>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="202" Margin="10,238,0,0" VerticalAlignment="Top" Width="487"/>
+        <Label Content="Withdrawals and Deposits" HorizontalAlignment="Left" Margin="26,250,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <TextBox x:Name="txtAccID" MaxLength="9" HorizontalAlignment="Left" Height="28" Margin="40,303,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="186" FontSize="20" IsEnabled="False"/>
+        <TextBox x:Name="txtBalance" MaxLength="9" HorizontalAlignment="Left" Height="28" Margin="269,303,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="186" FontSize="20" IsEnabled="False"/>
+        <TextBox x:Name="txtAmt" MaxLength="9" HorizontalAlignment="Left" Height="28" Margin="153,349,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="186" FontSize="20"/>
+        <Label Content="Amount : " HorizontalAlignment="Left" Margin="80,351,0,0" VerticalAlignment="Top" Width="68"/>
+        <Label Content="Account ID" HorizontalAlignment="Left" Margin="40,277,0,0" VerticalAlignment="Top" Width="68"/>
+        <Label Content="Balance" HorizontalAlignment="Left" Margin="269,277,0,0" VerticalAlignment="Top" Width="68"/>
+        <Button x:Name="btnWithdraw" Content="Withdraw" HorizontalAlignment="Left" Margin="26,397,0,0" VerticalAlignment="Top" Width="100" FontSize="16" Click="btnWithdraw_Click"/>
+        <Button x:Name="btnDeposit" Content="Deposit" HorizontalAlignment="Left" Margin="153,397,0,0" VerticalAlignment="Top" Width="100" FontSize="16" Click="btnDeposit_Click"/>
+        <Button x:Name="btnClear" Content="Clear" HorizontalAlignment="Left" Margin="269,397,0,0" VerticalAlignment="Top" Width="100" FontSize="16" Click="btnClear_Click"/>
+        <Button x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="386,397,0,0" VerticalAlignment="Top" Width="100" FontSize="16" Click="btnBack_Click"/>
+        <Label Content="Double Click on account to load details" HorizontalAlignment="Left" Margin="538,25,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Page>
